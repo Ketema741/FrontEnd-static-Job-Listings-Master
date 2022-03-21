@@ -93,11 +93,12 @@ body {
 @media only screen and (max-width: 768px) {
     .client__image {
         position: relative;
-        left: 3rem;
+        left: 1.5rem;
         top: -3.5rem;
     }
     .client__description span {
-        margin-left: .2rem;
+        margin-left: .5rem;
+        padding-left: .5rem;
     }
     .client_IsFeatured,
     .client__IsNew {
@@ -119,7 +120,7 @@ body {
 @media only screen and (max-width: 768px) {
     .client__header {
         position: static;
-        padding-left: 2rem;
+        padding-left: 1.5rem;
     }
 }
 
@@ -163,13 +164,13 @@ body {
     .client__work {
         position: static;
         margin-top: .5rem;
-        padding-left: 1.5rem;
+        padding-left: 1rem;
     }
     .client__list,
     .list__skill {
         position: relative;
         float: left;
-        padding-left: 1rem;
+        padding: .75rem;
         margin-top: .5rem;
     }
 }
