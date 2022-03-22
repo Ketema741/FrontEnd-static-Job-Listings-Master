@@ -1,10 +1,3 @@
-function isNew(data) {
-    if (data) { return 'visible' } else return 'none'
-}
-
-function isFeatured(data) {
-    if (data) { return 'visible' } else return 'none'
-}
 fetch("./data.json")
     .then(function(resp) {
         return resp.json()
@@ -13,11 +6,11 @@ fetch("./data.json")
             for (let i = 0; i < data.length; i++) {
                 const client = document.getElementById("main").innerHTML +=
                     `
-            <div class="client client--1" id=client>
+            <div class="client client--${i}" id=client >
                 <div class = "client__description">
                     <span class = "client__name"> ${data[i].company} </span> 
-                    <span class = "client__IsNew" style="display:${isNew(data[i].new)} ">new! </span> 
-                    <span class = "client_IsFeatured" style="display:${isFeatured(data[i].featured)} ">featured</span> 
+                    <span class = "client__IsNew" style="border:none; display:${(data[i].new)? 'visible' : 'none'} ">new! </span> 
+                    <span class = "client_IsFeatured" style="display:${(data[i].featured)? 'visible' : 'none'} ">featured</span> 
                     </div>
                     <img src="${data[i].logo}" alt="" class="client__image" id='logo'>
                     <h1 class="client__header" id="header"> ${data[i].position}</h1>
