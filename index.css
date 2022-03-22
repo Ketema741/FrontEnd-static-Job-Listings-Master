@@ -1,192 +1,221 @@
-                 html,
-                 body {
-                     box-sizing: border-box;
-                     margin: 0;
-                 }
-                 
-                 .header__image {
-                     width: 100vw;
-                     height: 8rem;
-                     background-color: hsl(180, 29%, 50%);
-                 }
-                 
-                 .client {
-                     min-height: 8rem;
-                     border-radius: .2rem;
-                     margin: 0rem 8rem 1.5rem 8rem;
-                     margin-top: -.5rem;
-                     background-color: #fff;
-                     font-family: 'Spartan', sans-serif;
-                     position: relative;
-                 }
-                 
-                 @media only screen and (max-width: 768px) {
-                     .client {
-                         height: 20rem;
-                         margin: 0rem 1rem 1.5rem 1rem;
-                     }
-                 }
-                 
-                 .client--1 {
-                     border-left: 4px solid hsl(180, 14%, 20%);
-                 }
-                 
-                 .main {
-                     margin-top: -.5rem;
-                     padding-top: 4rem;
-                     padding-bottom: 4rem;
-                     background-color: hsl(180, 52%, 96%);
-                     color: hsl(180, 52%, 96%);
-                     color: hsl(180, 31%, 95%);
-                     color: hsl(180, 8%, 52%);
-                     color: hsl(180, 14%, 20%)
-                 }
-                 
-                 .client__description {
-                     position: relative;
-                     left: 7rem;
-                     top: 2rem;
-                     font-weight: 500;
-                 }
-                 
-                 .client__name {
-                     color: hsl(180, 29%, 50%);
-                     font-weight: bold;
-                 }
-                 
-                 @media only screen and (max-width: 768px) {
-                     .client__description {
-                         left: .5rem;
-                         top: 2.5rem;
-                     }
-                 }
-                 
-                 .client__IsNew {
-                     background-color: hsl(180, 29%, 50%);
-                     padding: .5rem 1rem .5rem 1rem;
-                     font-size: 13px;
-                     color: #fff;
-                     border-radius: 1.2rem;
-                     text-transform: uppercase;
-                 }
-                 
-                 .client_IsFeatured {
-                     background-color: hsl(180, 14%, 20%);
-                     padding: .5rem 1rem .5rem 1rem;
-                     color: #fff;
-                     border-radius: 1.2rem;
-                     text-transform: uppercase;
-                     font-size: 13px;
-                 }
-                 
-                 .client__description span {
-                     margin-left: 1rem;
-                 }
-                 
-                 .client__image {
-                     width: 4rem;
-                     position: absolute;
-                     left: 2rem;
-                     top: 2rem;
-                 }
-                 
-                 @media only screen and (max-width: 768px) {
-                     .client__image {
-                         position: relative;
-                         left: 1.5rem;
-                         top: -3.5rem;
-                     }
-                     .client__description span {
-                         margin-left: .5rem;
-                         padding-left: .5rem;
-                     }
-                     .client_IsFeatured,
-                     .client__IsNew {
-                         padding: .5rem;
-                         font-size: 12px;
-                     }
-                 }
-                 
-                 .client__header {
-                     font-size: 18px;
-                     font-weight: bold;
-                     position: relative;
-                     left: 8rem;
-                     top: 1.8rem;
-                     padding-top: .5rem;
-                     padding-bottom: .5rem;
-                 }
-                 
-                 @media only screen and (max-width: 768px) {
-                     .client__header {
-                         position: static;
-                         padding-left: 1.5rem;
-                     }
-                 }
-                 
-                 .client__work {
-                     /* font-size: 10px; */
-                     position: relative;
-                     float: left;
-                     margin-top: 1.5rem;
-                     /* display: inline; */
-                     color: hsl(180, 8%, 52%);
-                     padding-left: 7.5rem;
-                     padding-bottom: .5rem;
-                     /* width: 40%; */
-                 }
-                 
-                 .client__time,
-                 .client__workType,
-                 .client__workPlace {
-                     display: inline;
-                     margin: .5rem;
-                 }
-                 
-                 .divider {
-                     border-bottom: 1px solid hsl(180, 8%, 52%);
-                     width: 90%;
-                     position: relative;
-                     display: none;
-                 }
-                 
-                 @media only screen and (max-width: 768px) {
-                     .divider {
-                         margin: 4rem 1.5rem 1rem 1.5rem;
-                         display: block;
-                     }
-                 }
-                 
-                 .client__experience {
-                     position: relative;
-                     float: right;
-                     font-size: 15px;
-                     padding-right: 1rem;
-                     top: -1rem;
-                     max-width: 30rem;
-                 }
-                 
-                 .client__skill {
-                     margin: .2rem;
-                     display: inline;
-                     list-style-type: circle;
-                     background-color: hsl(180, 31%, 95%);
-                     /* padding: .5rem; */
-                     color: hsl(180, 29%, 50%);
-                     font-weight: bold;
-                 }
-                 
-                 @media only screen and (max-width: 768px) {
-                     .client__work {
-                         position: static;
-                         margin-top: .5rem;
-                         padding-left: 1rem;
-                     }
-                     .client__experience,
-                     .client__skill {
-                         position: relative;
-                         float: left;
-                         padding: .75rem;
-                         margin-top: .5rem;
-                     }
-                 }
+    html,
+    body {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    .header__image {
+        width: 100vw;
+        height: 8rem;
+        background-color: hsl(180, 29%, 50%);
+        position: fixed;
+        z-index: 1;
+    }
+    
+    .main__container {
+        padding-top: 8rem;
+    }
+    
+    .client {
+        min-height: 8rem;
+        border-radius: .2rem;
+        margin: -.5rem 8rem 1.72rem 8rem;
+        background-color: #fff;
+        font-family: 'Spartan', sans-serif;
+        position: relative;
+        box-shadow: 0rem 1rem 1rem hsla(180, 14%, 20%, .1);
+    }
+    
+    @media only screen and (max-width: 1100px) {
+        .client {
+            height: 15rem;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .client {
+            height: 25rem;
+            margin: 4rem 1rem 1.5rem 1rem;
+        }
+    }
+    
+    .client--1 {
+        border-left: 5px solid hsl(180, 29%, 50%);
+    }
+    
+    .main {
+        margin-top: -.5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-color: hsl(180, 52%, 96%);
+        padding: relative;
+    }
+    
+    .client__description {
+        position: relative;
+        left: 8rem;
+        top: 2rem;
+        font-weight: 500;
+    }
+    
+    .client__name {
+        color: hsl(180, 29%, 50%);
+        font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .client__description {
+            left: .5rem;
+            top: 2.5rem;
+        }
+    }
+    
+    .client__IsNew,
+    .client_IsFeatured {
+        padding: .25rem .25rem 0rem .25rem;
+        color: #fff;
+        border-radius: 1.2rem;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-left: .3rem;
+    }
+    
+    .client__IsNew {
+        background-color: hsl(180, 29%, 50%);
+    }
+    
+    .client_IsFeatured {
+        background-color: hsl(180, 14%, 20%);
+    }
+    
+    .client__image {
+        width: 4rem;
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .client__image {
+            position: relative;
+            left: 1.5rem;
+            top: -3.5rem;
+        }
+        .client__description span {
+            margin-left: .5rem;
+            padding-left: .5rem;
+        }
+        .client_IsFeatured,
+        .client__IsNew {
+            padding: .5rem;
+            font-size: 12px;
+        }
+    }
+    
+    .client__header {
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+        left: 8rem;
+        top: 1.8rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .client__header {
+            position: static;
+            padding-left: 1.5rem;
+        }
+    }
+    
+    .client__work {
+        position: relative;
+        float: left;
+        margin-top: 1.5rem;
+        color: hsl(180, 8%, 52%);
+        padding-left: 7.5rem;
+        padding-bottom: .5rem;
+    }
+    
+    .client__time,
+    .client__workType,
+    .client__workPlace {
+        display: inline;
+        list-style-type: circle;
+        margin: .5rem;
+    }
+    
+    .client__work li::marker {
+        content: initial;
+        overflow-x: none;
+    }
+    
+    .client__workType:before,
+    .client__workPlace:before {
+        content: '\2022';
+        margin-right: 0.5em;
+    }
+    
+    .divider {
+        border-bottom: 1px solid hsl(180, 8%, 52%);
+        width: 90%;
+        position: relative;
+        display: none;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .divider {
+            margin: 4rem 1.5rem 1rem 1.5rem;
+            display: block;
+        }
+    }
+    
+    .client__experience {
+        position: relative;
+        float: right;
+        font-size: 15px;
+        padding-right: 1rem;
+        top: -1rem;
+        /* max-width: 50%; */
+    }
+    
+    .client__skill {
+        margin: .2rem;
+        display: inline;
+        list-style-type: circle;
+        background-color: hsl(180, 31%, 95%);
+        color: hsl(180, 29%, 50%);
+        font-weight: bold;
+        padding: .5rem;
+    }
+    
+    @media only screen and (max-width: 1100px) {
+        .client__experience {
+            margin-top: 1rem;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .client__work {
+            position: static;
+            margin-top: .5rem;
+            padding-left: 1rem;
+        }
+        .client__experience,
+        .client__skill {
+            position: relative;
+            float: left;
+            padding: .75rem;
+            margin-top: .5rem;
+        }
+    }
+    
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
