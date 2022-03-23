@@ -6,14 +6,14 @@ fetch("./data.json")
             for (let i = 0; i < data.length; i++) {
                 const client = document.getElementById("main").innerHTML +=
                     `
-            <div class="client client--${i}" id=client >
+            <div class="client client--${i}"  >
                 <div class = "client__description">
                     <span class = "client__name"> ${data[i].company} </span> 
-                    <span class = "client__IsNew" style="border:none; display:${(data[i].new)? 'visible' : 'none'} ">new! </span> 
-                    <span class = "client_IsFeatured" style="display:${(data[i].featured)? 'visible' : 'none'} ">featured</span> 
+                    <span class = "client__IsNew" style="border:none; display:${(data[i].new)? 'inline' : 'none'} ">new! </span> 
+                    <span class = "client_IsFeatured" style="display:${(data[i].featured)? 'inline' : 'none'} ">featured</span> 
                     </div>
-                    <img src="${data[i].logo}" alt="" class="client__image" id='logo'>
-                    <h1 class="client__header" id="header"> ${data[i].position}</h1>
+                    <img src="${data[i].logo}" alt="" class="client__image">
+                    <h1 class="client__header" > ${data[i].position}</h1>
                     <div class="client__info">
                         <ul class="client__work">
                             <li class="client__time">${data[i].postedAt}</li>
